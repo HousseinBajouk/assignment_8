@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(243, 243, 243);
+}
+h2{
+    display: grid;
+    justify-items: center;
+    margin-top: 5%;
+}
+#par{
+    display: grid;
+    justify-items: center;
+    margin-top: 2%;
+    text-align: center;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-right:2%;
+    margin-left:2%;
+    margin-top: 5%;
+    height: 200px;
+}
+#card1{
+    transition: all 150ms 20ms ease-in-out;
+}
+#card1:hover{
+    transform:translateY(-15px);
+}
+#card2{
+    transition: all 150ms 20ms ease-in-out;
+}
+#card2:hover{
+    transform: translateY(-15px);
+}
+#card3{
+    transition: all 150ms 20ms ease-in-out;
+}
+#card3:hover{
+    transform: translateY(-15px);
+}
+.card {
+    border:1px solid rgb(225, 223, 223);
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    background: #fff;
+    border-radius: 3%;
+}
+.icon_box{
+    background-color: rgba(0,0,0 0.4);
+    width: 60px;
+    height: 60px;
+    border: 2px solid none;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate{
+
+0% {
+ transform:scale(1);
+}
+50% {
+    transform: scale(1.15);
+}
+100%{
+transform:scale(1);
+}
+}
+
+
+#box1{
+    background-color: purple;
+}
+#box2{
+    background-color: rgb(164, 164, 29);
+    animation-delay: 200ms;
+}
+#box3{
+    background-color: rgb(18, 228, 228);
+    animation-delay: 400ms;
+}
+.title_box{
+    margin:5% 0;
+}
+.text_box{
+    color:rgba(128, 128, 128);
+    font-size: 13px;
+    text-align: center;
+    padding:0 10px;
+}
+
+@media (max-width: 800px){
+h2{
+        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    }
+    #par{
+        font-size: clamp(0.75rem, 1.5vw, 1rem);
+    }
+    .cards{
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 18px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .card{
+        min-height: 220px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+}
